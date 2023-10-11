@@ -11,6 +11,7 @@ export class FilmComponent implements OnInit {
   @Input() filmOnAir:boolean = false;
   @Input() filmAffiche:string = "";
   @Input() index = 0;
+  @Input() id = 0;
   // @Input() welcomeText:string = "Salut, voici ma nouvelle application"
 
   constructor(private Film : FilmService){}

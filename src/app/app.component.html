@@ -1,5 +1,28 @@
-<ul class="list-group">
-  <app-film *ngFor="let film of films; let i = index" [filmName]="film.title" [filmOnAir]="film.onAir" [filmAffiche]="film.filmAffiche" [index]="i"></app-film>
-  <button class="btn btn-outline-success" (click)="onAirAll()">En Salle</button>
-  <button class="btn btn-outline-danger" (click)="noOnAirAll()">Pas En Salle</button>
-</ul>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a routerLink="" class="navbar-brand">Film</a>
+  <button class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"></button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a routerLink="films" class="nav-link">Films</a>
+      </li>
+      <li class="nav-items" routerLinkActive="active">
+        <a routerLink="new" class="nav-link">NouveauFilm</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
